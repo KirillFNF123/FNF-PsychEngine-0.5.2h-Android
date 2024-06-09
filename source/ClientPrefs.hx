@@ -14,6 +14,7 @@ class ClientPrefs {
 	public static var globalAntialiasing:Bool = true;
 	public static var noteSplashes:Bool = true;
 	public static var lowQuality:Bool = false;
+	public static var shaders:Bool = false;
 	public static var framerate:Int = 60;
 	public static var cursing:Bool = true;
 	public static var violence:Bool = true;
@@ -98,6 +99,7 @@ class ClientPrefs {
 		FlxG.save.data.globalAntialiasing = globalAntialiasing;
 		FlxG.save.data.noteSplashes = noteSplashes;
 		FlxG.save.data.lowQuality = lowQuality;
+		FlxG.save.data.shaders = shaders;
 		FlxG.save.data.framerate = framerate;
 		//FlxG.save.data.cursing = cursing;
 		//FlxG.save.data.violence = violence;
@@ -167,6 +169,9 @@ class ClientPrefs {
 			} else {
 				FlxG.drawFramerate = framerate;
 				FlxG.updateFramerate = framerate;
+				if(FlxG.save.data.shaders != null) {
+	shaders = FlxG.save.data.shaders;
+}
 			}
 		}
 		/*if(FlxG.save.data.cursing != null) {
