@@ -52,6 +52,13 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 		option.showBoyfriend = true;
 		option.onChange = onChangeAntiAliasing; //Changing onChange is only needed if you want to make a special interaction after it changes the value
 		addOption(option);
+		
+		var option:Option = new Option('Shaders', //Name
+	        'for example addGlitchEffect.', //Description
+        	'shaders', //Save data variable name
+	        'bool', //Variable type
+	        false); //Default value
+        addOption(option);
 
 		#if !html5 //Apparently other framerates isn't correctly supported on Browser? Probably it has some V-Sync shit enabled by default, idk
 		var option:Option = new Option('Framerate',
